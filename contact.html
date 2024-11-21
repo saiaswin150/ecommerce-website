@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nostra</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Nostra</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="#">Home</a></p>
+            <p class="navbar-link"><a href="#">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+        <div class="navbar-menu-toggle" onclick="toggleNavbar()">
+            <i class="fa-solid fa-bars"></i> <!-- Hamburger icon -->
+        </div>
+    </nav>
+
+    <!-- Side Navbar -->
+    <div class="side-navbar" id="sideNavbar">
+        <p style="text-align: right;">
+            <i class="fa-solid fa-xmark" onclick="toggleNavbar()"></i> <!-- Close icon -->
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact">
+        <h1>Contact Us</h1>
+        <form action="" class="form">
+            <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name">
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email">
+            </p>
+            <p>
+                <label for="phone">Phone</label>
+                <input type="number" id="phone" placeholder="Your Phone">
+            </p>
+            <p>
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Your Message" rows="6"></textarea>
+            </p>
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+                <h2 class="headingText">Nostra</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate veniam totam porro qui voluptatum! Optio?</p>
+                <div class="footer-icon-container">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            </div>
+        </div>
+        <p>@2024 nostra.com</p>
+    </div>
+
+    <script src="collection.js"></script>
+    <script>
+        // Toggle side navbar
+        function toggleNavbar() {
+            const sideNavbar = document.getElementById('sideNavbar');
+            if (sideNavbar.style.left === "0px") {
+                sideNavbar.style.left = "-250px"; // Hide the navbar
+            } else {
+                sideNavbar.style.left = "0px"; // Show the navbar
+            }
+        }
+    </script>
+</body>
+</html>
